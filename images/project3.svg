@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Project 3 illustration: Data Dashboard -->
+  <rect width="400" height="300" rx="10" fill="#1e1e1e" />
+  
+  <!-- Dashboard container -->
+  <rect x="20" y="20" width="360" height="260" rx="5" fill="#222" />
+  
+  <!-- Header bar -->
+  <rect x="20" y="20" width="360" height="40" rx="5" fill="#333" />
+  <rect x="35" y="35" width="100" height="10" rx="2" fill="#6c63ff" opacity="0.8" />
+  <circle cx="350" cy="40" r="10" fill="#444" />
+  <circle cx="320" cy="40" r="10" fill="#444" />
+  
+  <!-- Sidebar -->
+  <rect x="20" y="60" width="80" height="220" fill="#2a2a2a" />
+  
+  <!-- Sidebar menu items -->
+  <rect x="30" y="80" width="60" height="8" rx="2" fill="#6c63ff" opacity="0.8" />
+  <rect x="30" y="100" width="60" height="8" rx="2" fill="#444" />
+  <rect x="30" y="120" width="60" height="8" rx="2" fill="#444" />
+  <rect x="30" y="140" width="60" height="8" rx="2" fill="#444" />
+  <rect x="30" y="160" width="60" height="8" rx="2" fill="#444" />
+  
+  <!-- Main content area -->
+  <rect x="110" y="70" width="260" height="100" rx="5" fill="#2a2a2a" />
+  
+  <!-- Chart elements -->
+  <rect x="120" y="80" width="240" height="20" rx="2" fill="#333" />
+  
+  <!-- Bar chart -->
+  <rect x="130" y="110" width="20" height="50" rx="2" fill="#6c63ff" opacity="0.6" />
+  <rect x="160" y="120" width="20" height="40" rx="2" fill="#6c63ff" opacity="0.7" />
+  <rect x="190" y="90" width="20" height="70" rx="2" fill="#6c63ff" opacity="0.8" />
+  <rect x="220" y="130" width="20" height="30" rx="2" fill="#6c63ff" opacity="0.6" />
+  <rect x="250" y="100" width="20" height="60" rx="2" fill="#6c63ff" opacity="0.7" />
+  <rect x="280" y="115" width="20" height="45" rx="2" fill="#6c63ff" opacity="0.8" />
+  
+  <!-- Bottom cards -->
+  <rect x="110" y="180" width="120" height="90" rx="5" fill="#2a2a2a" />
+  <rect x="250" y="180" width="120" height="90" rx="5" fill="#2a2a2a" />
+  
+  <!-- Card content -->
+  <circle cx="140" cy="210" r="20" fill="none" stroke="#6c63ff" stroke-width="5" stroke-dasharray="30 100" />
+  <text x="140" y="215" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">75%</text>
+  <rect x="170" y="200" width="50" height="8" rx="2" fill="#444" />
+  <rect x="170" y="215" width="40" height="8" rx="2" fill="#444" />
+  
+  <!-- Line chart in second card -->
+  <polyline points="260,240 275,220 290,230 305,210 320,225 335,200" fill="none" stroke="#6c63ff" stroke-width="2" />
+  <rect x="260" y="190" width="100" height="8" rx="2" fill="#444" />
+</svg>
