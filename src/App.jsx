@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Toaster } from '@/components/ui/toaster';
@@ -17,33 +17,20 @@ import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 import PixelWipe from '@/components/PixelWipe';
 import SettingsPanel from '@/components/SettingsPanel';
+import BackgroundMusic from '@/components/BackgroundMusic';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [gameStarted, setGameStarted] = useState(false);
   const [theme, setTheme] = useLocalStorage('portfolio-theme', 'dark');
   const [isMusicPlaying, setIsMusicPlaying] = useLocalStorage('portfolio-music', false);
-  const audioRef = useRef(null);
 
   useEffect(() => {
     document.body.className = theme === 'light' ? 'light-theme' : '';
   }, [theme]);
 
-  useEffect(() => {
-    if (audioRef.current) {
-      if (isMusicPlaying) {
-        audioRef.current.play().catch(e => console.error("Audio play failed:", e));
-      } else {
-        audioRef.current.pause();
-      }
-    }
-  }, [isMusicPlaying]);
-
   const handleStartGame = () => {
     setGameStarted(true);
-    if (isMusicPlaying && audioRef.current) {
-      audioRef.current.play().catch(e => console.error("Audio play failed:", e));
-    }
   };
 
   const handleNavClick = (section) => {
@@ -74,7 +61,7 @@ function App() {
         <meta name="description" content="Anantraj Prasad's interactive portfolio. A computer science student specializing in Data Structures, Algorithms, and full-stack development." />
       </Helmet>
 
-      <audio ref={audioRef} src="/chiptune.mp3" loop />
+      <BackgroundMusic src="/assets/background.mp3" play={gameStarted && isMusicPlaying} />
 
       <AnimatePresence mode="wait">
         {!gameStarted && <Home onStart={handleStartGame} />}

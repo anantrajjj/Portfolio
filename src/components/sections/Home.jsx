@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Section from '@/components/Section';
+import ButtonSound from '@/components/ButtonSound';
 
 const Home = ({ onStart }) => {
   const [showButton, setShowButton] = useState(false);
+  const [playButtonSound, setPlayButtonSound] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -12,6 +14,12 @@ const Home = ({ onStart }) => {
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleStartClick = () => {
+    setPlayButtonSound(true);
+    onStart();
+    setTimeout(() => setPlayButtonSound(false), 500); // Reset after sound
+  };
 
   return (
     <Section id="home" className="flex items-center justify-center h-screen">
@@ -54,9 +62,10 @@ const Home = ({ onStart }) => {
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, type: 'spring' }}
           >
-            <Button onClick={onStart} className="pixel-button bg-[var(--pixel-accent-1)] text-xl sm:text-2xl px-6 sm:px-8 py-3 sm:py-4 animate-pulse">
+            <Button onClick={handleStartClick} className="pixel-button bg-[var(--pixel-accent-1)] text-xl sm:text-2xl px-6 sm:px-8 py-3 sm:py-4 animate-pulse">
               PRESS START
             </Button>
+            <ButtonSound src="/assets/button.mp3" play={playButtonSound} />
           </motion.div>
         )}
       </div>
