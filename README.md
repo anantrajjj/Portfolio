@@ -4,10 +4,7 @@
 
 A personal portfolio website built with React and Framer Motion, designed with a retro, 8-bit gaming aesthetic to showcase my projects in a fun and interactive way.
 
-**[➡️ View Live Demo](https://your-live-demo-link.com)**
-
-![Portfolio Screenshot](./path/to/your/screenshot.png)
-*(Suggestion: Replace the image path above with a screenshot of your finished portfolio)*
+**[➡️ View Live Demo](https://anantraj.netlify.me)**
 
 ## About The Project
 
@@ -101,4 +98,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Anantraj Prasad - [linkedin.com/in/anantraj-prasad](https://linkedin.com/in/anantraj-prasad)
 
-Project Link: [https://github.com/anantrajjj/your-portfolio-repo](https://github.com/anantrajjj/Portfolio_)
+Project Link: [https://github.com/anantrajjj/portfolio](https://github.com/anantrajjj/portfolio)
